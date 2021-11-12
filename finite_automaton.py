@@ -74,6 +74,8 @@ class FiniteAutomaton:
                     crt_state = self.transitions[(crt_state, symbol)][0]
                 except KeyError:
                     return False
+            if input == "":
+                return False
             return crt_state in self.F
         return False
 
